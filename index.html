@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Copa +Total Sports 2026</title>
+
+  <meta
+    name="description"
+    content="Copa +Total Sports 2026. Torneo de fútbol infantil en Monterrey, Nuevo León. 27, 28 y 29 de noviembre."
+  >
+
+  <style>
+    :root {
+      --negro: #05070b;
+      --negro2: #0b1018;
+      --azul: #009dff;
+      --azul-oscuro: #002b61;
+      --dorado: #dcae45;
+      --dorado-claro: #ffd96a;
+      --blanco: #ffffff;
+      --gris: #aeb8c6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 50% 0%, #06356b 0%, #071426 25%, #05070b 55%);
+      color: var(--blanco);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* MENÚ */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 7, 11, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 217, 106, 0.2);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 72px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 900;
+      font-size: 21px;
+      letter-spacing: -0.5px;
+    }
+
+    .brand span {
+      color: var(--dorado-claro);
+    }
+
+    .menu {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .menu a:hover {
+      color: var(--dorado-claro);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: rgba(0, 157, 255, 0.12);
+      filter: blur(80px);
+      z-index: -1;
+    }
+
+    .hero-content {
+      max-width: 1000px;
+    }
+
+    .logo-placeholder {
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      margin: 0 auto 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--dorado);
+      background: linear-gradient(145deg, #082c59, #02050a);
+      box-shadow:
+        0 0 45px rgba(0, 157, 255, 0.3),
+        0 0 30px rgba(220, 174, 69, 0.18);
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--dorado-claro);
+    }
+
+    .eyebrow {
+      color: var(--dorado-claro);
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 4px;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 9vw, 100px);
+      line-height: 0.92;
+      letter-spacing: -5px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: var(--dorado-claro);
+    }
+
+    .hero-description {
+      color: #d7e0ea;
+      max-width: 760px;
+      margin: 0 auto 30px;
+      font-size: 19px;
+    }
+
+    .event-date {
+      font-size: clamp(22px, 4vw, 34px);
+      font-weight: 900;
+      color: var(--blanco);
+      margin: 20px 0 5px;
+    }
+
+    .location {
+      color: var(--gris);
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 15px 28px;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 14px;
+      transition: 0.25s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      color: #07101b;
+      background: linear-gradient(90deg, #d4a633, #ffe078);
+      box-shadow: 0 10px 30px rgba(220, 174, 69, 0.25);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,.3);
+      color: white;
+      background: rgba(255,255,255,.05);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* CONTADOR */
+
+    .countdown-area {
+      padding: 30px 20px 80px;
+    }
+
+    .countdown {
+      max-width: 800px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .count-box {
+      padding: 24px 10px;
+      text-align: center;
+      border-radius: 18px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.09);
+    }
+
+    .count-box strong {
+      display: block;
+      font-size: 36px;
+      color: var(--dorado-claro);
+    }
+
+    .count-box span {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gris);
+    }
+
+    /* SECCIONES */
+
+    section {
+      padding: 95px 20px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: var(--azul);
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1;
+      margin-bottom: 20px;
+      letter-spacing: -2px;
+    }
+
+    .section-intro {
+      max-width: 750px;
+      color: var(--gris);
+      margin-bottom: 45px;
+    }
+
+    /* TARJETAS */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+      border: 1px solid rgba(255,255,255,.1);
+      padding: 30px;
+      border-radius: 22px;
+    }
+
+    .card:hover {
+      border-color: rgba(255,217,106,.5);
+    }
+
+    .card h3 {
+      color: var(--dorado-claro);
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    .category-list {
+      list-style: none;
+    }
+
+    .category-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      color: #d9e0e9;
+    }
+
+    .category-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* INFO */
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .info-box {
+      text-align: center;
+      padding: 30px 18px;
+      border-radius: 20px;
+      background: #0b111b;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .info-icon {
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
+
+    .info-box strong {
+      display: block;
+      color: var(--dorado-claro);
+      font-size: 18px;
+    }
+
+    .info-box p {
+      color: var(--gris);
+      font-size: 14px;
+    }
+
+    /* PRECIOS */
+
+    .prices {
+      background: #070b11;
+    }
+
+    .price-table-wrapper {
+      overflow-x: auto;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 750px;
+      background: #0b111b;
+    }
+
+    th,
+    td {
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    th {
+      background: #101927;
+      color: var(--dorado-claro);
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    td:first-child,
+    th:first-child {
+      text-align: left;
+      font-weight: 900;
+    }
+
+    .current-price {
+      background: rgba(0,157,255,.12);
+      border-left: 1px solid rgba(0,157,255,.35);
+      border-right: 1px solid rgba(0,157,255,.35);
+    }
+
+    .current-label {
+      display: block;
+      font-size: 9px;
+      color: #59c7ff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    .reserve {
+      margin-top: 30px;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid var(--dorado);
+      background:
+        linear-gradient(90deg, rgba(220,174,69,.15), rgba(0,157,255,.08));
+    }
+
+    .reserve h3 {
+      color: var(--dorado-claro);
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .reserve p {
+      color: #d5dce5;
+    }
+
+    /* PREMIACIÓN */
+
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .award {
+      padding: 30px 15px;
+      border-radius: 20px;
+      text-align: center;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .award .emoji {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .award strong {
+      display: block;
+      font-size: 17px;
+    }
+
+    /* ACTIVACIONES */
+
+    .activation {
+      border-radius: 25px;
+      padding: 50px;
+      background:
+        radial-gradient(circle at right, rgba(0,157,255,.23), transparent 45%),
+        linear-gradient(135deg, #101927, #06090e);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+
+    /* REGISTRO */
+
+    .registration {
+      background:
+        radial-gradient(circle at 50% 0%, rgba(0,157,255,.17), transparent 50%);
+    }
+
+    form {
+      max-width: 850px;
+      margin: 40px auto 0;
+      background: #0b111b;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 25px;
+      padding: 35px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 800;
+      color: #dce5ef;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 12px;
+      padding: 14px;
+      background: #070b11;
+      color: white;
+      outline: none;
+      font-size: 15px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--azul);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 22px;
+    }
+
+    /* CONTACTO */
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-links {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      color: #7f8996;
+      border-top: 1px solid rgba(255,255,255,.08);
+      font-size: 13px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .info-grid,
+      .awards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .menu {
+        display: none;
+      }
+
+      h1 {
+        letter-spacing: -3px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 70px 18px;
+      }
+
+      .countdown {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .info-grid,
+      .awards-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .activation {
+        padding: 30px 22px;
+      }
+
+      .logo-placeholder {
+        width: 145px;
+        height: 145px;
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENÚ -->
+
+  <nav>
+    <div class="nav-container">
+      <div class="brand">COPA <span>+TOTAL SPORTS</span></div>
+
+      <div class="menu">
+        <a href="#categorias">Categorías</a>
+        <a href="#formato">Formato</a>
+        <a href="#precios">Precios</a>
+        <a href="#premiacion">Premiación</a>
+        <a href="#registro">Inscripción</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- PORTADA -->
+
+  <header class="hero">
+    <div class="hero-content">
+
+      <!--
+        AQUÍ PONDREMOS EL LOGO REAL EN EL SIGUIENTE PASO
+      -->
+
+      <div class="logo-placeholder">
+        +TOTAL
+      </div>
+
+      <div class="eyebrow">Monterrey, Nuevo León</div>
+
+      <h1>
+        COPA<br>
+        <span>+TOTAL SPORTS</span>
+      </h1>
+
+      <p class="hero-description">
+        Tres días de fútbol, competencia y pasión.
+        Vive una experiencia deportiva para jugadores,
+        entrenadores y familias.
+      </p>
+
+      <div class="event-date">
+        27 · 28 · 29 NOVIEMBRE 2026
+      </div>
+
+      <div class="location">
+        Prepa Tec Cumbres y colegios de Zona Cumbres · Monterrey, Nuevo León
+      </div>
+
+      <div class="buttons">
+        <a href="#registro" class="btn btn-primary">
+          Inscribe a tu equipo
+        </a>
+
+        <a href="#categorias" class="btn btn-secondary">
+          Ver categorías
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- CONTADOR -->
+
+  <div class="countdown-area">
+
+    <div style="text-align:center; margin-bottom:20px;">
+      <div class="section-label">El torneo comienza en</div>
+    </div>
+
+    <div class="countdown">
+
+      <div class="count-box">
+        <strong id="days">00</strong>
+        <span>Días</span>
+      </div>
+
+      <div class="count-box">
+        <strong id="hours">00</strong>
+        <span>Horas</span>
+      </div>
+
+      <div class="count-box">
+        <strong id="minutes">00</strong>
+        <span>Minutos</span>
+      </div>
+
+      <div class="count-box">
+        <strong id="seconds">00</strong>
+        <span>Segundos</span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- CATEGORÍAS -->
+
+  <section id="categorias">
+    <div class="container">
+
+      <div class="section-label">Categorías</div>
+
+      <h2>Encuentra tu categoría.</h2>
+
+      <p class="section-intro">
+        Copa +Total Sports contará con modalidades de Fútbol 3,
+        Fútbol 5 y Fútbol 7.
+      </p>
+
+
+      <div class="cards">
+
+        <!-- FUTBOL 3 -->
+
+        <div class="card">
+
+          <h3>Fútbol 3</h3>
+
+          <ul class="category-list">
+
+            <li>
+              <strong>2022</strong><br>
+              Recreativa · Todos son campeones
+            </li>
+
+            <li>
+              <strong>2022</strong><br>
+              Competencia · Final directa
+            </li>
+
+            <li>
+              <strong>2021</strong><br>
+              Recreativa · Todos son campeones
+            </li>
+
+            <li>
+              <strong>2021</strong><br>
+              Competencia · Final directa
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- FUTBOL 5 -->
+
+        <div class="card">
+
+          <h3>Fútbol 5</h3>
+
+          <ul class="category-list">
+
+            <li>
+              <strong>2020</strong><br>
+              Competencia
+            </li>
+
+            <li>
+              <strong>2019</strong><br>
+              Competencia
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- FUTBOL 7 -->
+
+        <div class="card">
+
+          <h3>Fútbol 7</h3>
+
+          <ul class="category-list">
+
+            <li>2019 · Competencia</li>
+            <li>2018 · Competencia</li>
+            <li>2017 · Competencia</li>
+            <li>2016 · Competencia</li>
+            <li>2015 · Competencia</li>
+            <li>2014 · Competencia</li>
+            <li>2013 · Competencia</li>
+            <li>2012 · Competencia</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FORMATO -->
+
+  <section id="formato">
+
+    <div class="container">
+
+      <div class="section-label">Formato del torneo</div>
+
+      <h2>Más partidos. Más competencia.</h2>
+
+      <p class="section-intro">
+        Diseñado para que cada equipo viva una experiencia competitiva
+        completa durante Copa +Total Sports.
+      </p>
+
+      <div class="info-grid">
+
+        <div class="info-box">
+          <div class="info-icon">⚽</div>
+          <strong>3 partidos</strong>
+          <p>Garantizados para cada equipo.</p>
+        </div>
+
+        <div class="info-box">
+          <div class="info-icon">🏆</div>
+          <strong>Fase final</strong>
+          <p>Semifinal y final según el formato.</p>
+        </div>
+
+        <div class="info-box">
+          <div class="info-icon">👥</div>
+          <strong>Ramas</strong>
+          <p>Varonil y mixto.</p>
+        </div>
+
+        <div class="info-box">
+          <div class="info-icon">📍</div>
+          <strong>Zona Cumbres</strong>
+          <p>Monterrey, Nuevo León.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PRECIOS -->
+
+  <section class="prices" id="precios">
+
+    <div class="container">
+
+      <div class="section-label">Inscripciones</div>
+
+      <h2>Entre antes, mejor precio.</h2>
+
+      <p class="section-intro">
+        Asegura la participación de tu equipo en Copa +Total Sports.
+        Precios expresados en pesos mexicanos.
+      </p>
+
+
+      <div class="price-table-wrapper">
+
+        <table>
+
+          <thead>
+
+            <tr>
+              <th>Modalidad</th>
+              <th>Septiembre</th>
+
+              <th class="current-price">
+                Octubre
+                <span class="current-label">Precio actual</span>
+              </th>
+
+              <th>Noviembre</th>
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>Fútbol 3 · Recreativa</td>
+              <td>$4,000</td>
+              <td class="current-price">$4,500</td>
+              <td>$5,000</td>
+            </tr>
+
+            <tr>
+              <td>Fútbol 3 · Competencia</td>
+              <td>$4,500</td>
+              <td class="current-price">$5,000</td>
+              <td>$5,500</td>
+            </tr>
+
+            <tr>
+              <td>Fútbol 5</td>
+              <td>$5,800</td>
+              <td class="current-price">$6,300</td>
+              <td>$6,800</td>
+            </tr>
+
+            <tr>
+              <td>Fútbol 7</td>
+              <td>$6,500</td>
+              <td class="current-price">$7,000</td>
+              <td>$7,500</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+
+      <div class="reserve">
+
+        <h3>APARTA TU LUGAR CON $2,000 MXN</h3>
+
+        <p>
+          Reserva el lugar de tu equipo con $2,000 y liquida
+          el resto de acuerdo con la tarifa vigente correspondiente.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PREMIACIÓN -->
+
+  <section id="premiacion">
+
+    <div class="container">
+
+      <div class="section-label">Premiación</div>
+
+      <h2>Reconocemos a los mejores.</h2>
+
+      <p class="section-intro">
+        Premiación por categoría durante Copa +Total Sports.
+      </p>
+
+      <div class="awards-grid">
+
+        <div class="award">
+          <div class="emoji">🏆</div>
+          <strong>Campeón</strong>
+        </div>
+
+        <div class="award">
+          <div class="emoji">🥈</div>
+          <strong>Subcampeón</strong>
+        </div>
+
+        <div class="award">
+          <div class="emoji">⚽</div>
+          <strong>Goleador</strong>
+        </div>
+
+        <div class="award">
+          <div class="emoji">🧤</div>
+          <strong>Mejor portero</strong>
+        </div>
+
+      </div>
+
+      <p style="text-align:center;color:#aeb8c6;margin-top:25px;">
+        Medallas para todos los finalistas.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCIA -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="activation">
+
+        <div class="section-label">Más que fútbol</div>
+
+        <h2>Vive la experiencia +Total.</h2>
+
+        <p style="color:#cbd5e1; max-width:750px;">
+          Durante el evento tendremos dinámicas y activaciones
+          especiales de nuestras marcas patrocinadoras para jugadores,
+          entrenadores y familias.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- REGISTRO -->
+
+  <section class="registration" id="registro">
+
+    <div class="container">
+
+      <div style="text-align:center;">
+
+        <div class="section-label">Registro</div>
+
+        <h2>Inscribe a tu equipo.</h2>
+
+        <p style="color:#aeb8c6;">
+          Completa tus datos y continúa tu inscripción por WhatsApp.
+        </p>
+
+      </div>
+
+
+      <form id="registrationForm">
+
+        <div class="form-grid">
+
+          <div class="field">
+            <label>Nombre del equipo / academia *</label>
+            <input id="team" type="text" required>
+          </div>
+
+          <div class="field">
+            <label>Entrenador o responsable *</label>
+            <input id="coach" type="text" required>
+          </div>
+
+          <div class="field">
+            <label>WhatsApp *</label>
+            <input id="phone" type="tel" required>
+          </div>
+
+          <div class="field">
+            <label>Correo electrónico</label>
+            <input id="email" type="email">
+          </div>
+
+          <div class="field">
+            <label>Ciudad *</label>
+            <input id="city" type="text" required>
+          </div>
+
+          <div class="field">
+
+            <label>Modalidad *</label>
+
+            <select id="modality" required onchange="updateCategories()">
+
+              <option value="">Seleccionar</option>
+
+              <option value="Fútbol 3">
+                Fútbol 3
+              </option>
+
+              <option value="Fútbol 5">
+                Fútbol 5
+              </option>
+
+              <option value="Fútbol 7">
+                Fútbol 7
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="field">
+
+            <label>Categoría *</label>
+
+            <select id="category" required>
+              <option value="">Primero selecciona modalidad</option>
+            </select>
+
+          </div>
+
+
+          <div class="field">
+
+            <label>Rama *</label>
+
+            <select id="branch" required>
+
+              <option value="">Seleccionar</option>
+              <option>Varonil</option>
+              <option>Mixto</option>
+
+            </select>
+
+          </div>
+
+
+          <div class="field">
+
+            <label>Número aproximado de jugadores</label>
+
+            <input
+              id="players"
+              type="number"
+              min="1"
+              placeholder="Ej. 12"
+            >
+
+          </div>
+
+
+          <div class="field full">
+
+            <label>Comentarios o dudas</label>
+
+            <textarea
+              id="comments"
+              placeholder="Escribe aquí cualquier comentario..."
+            ></textarea>
+
+          </div>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="btn btn-primary submit-btn"
+        >
+          Continuar inscripción por WhatsApp
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACTO -->
+
+  <section class="contact">
+
+    <div class="container">
+
+      <div class="section-label">Contacto</div>
+
+      <h2>¿Listos para competir?</h2>
+
+      <p style="color:#aeb8c6;">
+        Copa +Total Sports · Monterrey, Nuevo León
+      </p>
+
+
+      <div class="contact-links">
+
+        <a
+          href="https://wa.me/528115296386"
+          target="_blank"
+          class="btn btn-primary"
+        >
+          WhatsApp · 81 1529 6386
+        </a>
+
+        <a
+          href="https://instagram.com/total_sports_mty"
+          target="_blank"
+          class="btn btn-secondary"
+        >
+          Instagram · @total_sports_mty
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+
+    © 2026 Copa +Total Sports · Todos los derechos reservados.
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    /* ================================
+       CONTADOR
+    ================================= */
+
+    const tournamentDate =
+      new Date("2026-11-27T08:00:00-06:00").getTime();
+
+
+    function updateCountdown() {
+
+      const now = new Date().getTime();
+
+      const distance = tournamentDate - now;
+
+
+      if (distance <= 0) {
+
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+
+        return;
+      }
+
+
+      const days =
+        Math.floor(distance / (1000 * 60 * 60 * 24));
+
+      const hours =
+        Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) /
+          (1000 * 60 * 60)
+        );
+
+      const minutes =
+        Math.floor(
+          (distance % (1000 * 60 * 60)) /
+          (1000 * 60)
+        );
+
+      const seconds =
+        Math.floor(
+          (distance % (1000 * 60)) / 1000
+        );
+
+
+      document.getElementById("days").textContent =
+        String(days).padStart(2, "0");
+
+      document.getElementById("hours").textContent =
+        String(hours).padStart(2, "0");
+
+      document.getElementById("minutes").textContent =
+        String(minutes).padStart(2, "0");
+
+      document.getElementById("seconds").textContent =
+        String(seconds).padStart(2, "0");
+
+    }
+
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
+
+
+    /* ================================
+       CATEGORÍAS DINÁMICAS
+    ================================= */
+
+    function updateCategories() {
+
+      const modality =
+        document.getElementById("modality").value;
+
+      const category =
+        document.getElementById("category");
+
+
+      category.innerHTML =
+        '<option value="">Seleccionar</option>';
+
+
+      let options = [];
+
+
+      if (modality === "Fútbol 3") {
+
+        options = [
+          "2022 Recreativa",
+          "2022 Competencia",
+          "2021 Recreativa",
+          "2021 Competencia"
+        ];
+
+      }
+
+
+      if (modality === "Fútbol 5") {
+
+        options = [
+          "2020 Competencia",
+          "2019 Competencia"
+        ];
+
+      }
+
+
+      if (modality === "Fútbol 7") {
+
+        options = [
+          "2019",
+          "2018",
+          "2017",
+          "2016",
+          "2015",
+          "2014",
+          "2013",
+          "2012"
+        ];
+
+      }
+
+
+      options.forEach(function(optionText) {
+
+        const option =
+          document.createElement("option");
+
+        option.value = optionText;
+
+        option.textContent = optionText;
+
+        category.appendChild(option);
+
+      });
+
+    }
+
+
+
+    /* ================================
+       REGISTRO POR WHATSAPP
+    ================================= */
+
+    document
+      .getElementById("registrationForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const team =
+          document.getElementById("team").value;
+
+        const coach =
+          document.getElementById("coach").value;
+
+        const phone =
+          document.getElementById("phone").value;
+
+        const email =
+          document.getElementById("email").value;
+
+        const city =
+          document.getElementById("city").value;
+
+        const modality =
+          document.getElementById("modality").value;
+
+        const category =
+          document.getElementById("category").value;
+
+        const branch =
+          document.getElementById("branch").value;
+
+        const players =
+          document.getElementById("players").value;
+
+        const comments =
+          document.getElementById("comments").value;
+
+
+        const message =
+`Hola, quiero registrar un equipo en COPA +TOTAL SPORTS 2026.
+
+⚽ Equipo / Academia: ${team}
+👤 Responsable: ${coach}
+📱 WhatsApp: ${phone}
+📧 Correo: ${email || "No proporcionado"}
+📍 Ciudad: ${city}
+
+🏟️ Modalidad: ${modality}
+🏆 Categoría: ${category}
+👥 Rama: ${branch}
+⚽ Jugadores aproximados: ${players || "No especificado"}
+
+💬 Comentarios:
+${comments || "Sin comentarios"}
+
+Quiero recibir información para continuar con mi inscripción.`;
+
+
+        const whatsappNumber =
+          "528115296386";
+
+
+        const url =
+          "https://wa.me/" +
+          whatsappNumber +
+          "?text=" +
+          encodeURIComponent(message);
+
+
+        window.open(url, "_blank");
+
+      });
+
+  </script>
+
+</body>
+</html>
